@@ -13,7 +13,7 @@ var gulp          = require('gulp'),
 		imagemin      = require('gulp-imagemin'),
 		cache         = require('gulp-cache'),
 		ftp           = require('vinyl-ftp'),
-		rigger        = require('gulp-rigger');
+		pug           = require('gulp-pug');
 
 gulp.task('browser-sync', function() {
 	browsersync({
@@ -68,10 +68,12 @@ gulp.task('imagemin', function() {
 	.pipe(gulp.dest('dist/img')); 
 });
 
-gulp.task('html', function () {
-    gulp.src('app/html/*.html')
-        .pipe(rigger())
-        .pipe(gulp.dest('app/'));
+gulp.task('pug', function () {
+    return gulp.src('app/pug/*.pug')
+    .pipe(pug({
+        pretty: true
+    }))
+    .pipe(gulp.dest('app'));
 });
 
 gulp.task('rsync', function() {
@@ -91,7 +93,7 @@ gulp.task('rsync', function() {
 
 gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
-	gulp.watch('app/html/**/*.html', ['html']);
+	gulp.watch('app/pug/**/*.pug', ['pug']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch('app/*.html', browsersync.reload)
 });
