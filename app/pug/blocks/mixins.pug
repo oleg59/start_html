@@ -1,0 +1,10 @@
+mixin item(img)
+	.col-12.col-md-6.col-lg-4
+		a(href="#").item
+			img(src=`img/images/${img}`, alt="" download).item__img
+			.item__socials.socials
+				img(src="img/vk.svg", alt="" onclick="Share.vkontakte('http://neperm.fors59.ru/123','123','http://neperm.fors59.ru/','');return false;").socials_vk
+				img(src="img/ok.svg", alt="" onclick="Share.odnoklassniki('http://neperm.fors59.ru/123','123');return false;").socials_ok
+				img(src="img/tw.svg", alt="" onclick="Share.twitter('http://neperm.fors59.ru/123','123');return false;").socials_tw
+				img(src="img/fb.svg", alt="" onclick="Share.facebook('http://neperm.fors59.ru/123','123','http://neperm.fors59.ru/','');return false;").socials_fb
+			.item__more Подробнее
