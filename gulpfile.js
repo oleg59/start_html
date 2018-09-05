@@ -72,7 +72,7 @@ gulp.task('pug', function () {
     return gulp.src('app/pug/*.pug')
     .pipe(pug({
         pretty: true
-    }))
+    }).on("error", notify.onError()))
     .pipe(gulp.dest('app'));
 });
 
