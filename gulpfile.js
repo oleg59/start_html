@@ -94,7 +94,7 @@ gulp.task('rsync', function() {
 gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch('app/pug/**/*.pug', ['pug']);
-	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
+	gulp.watch(['app/libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch('app/*.html', browsersync.reload)
 });
 
@@ -116,11 +116,6 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 	var buildFonts = gulp.src([
 		'app/fonts/**/*',
 		]).pipe(gulp.dest('dist/fonts'));
-
-	var buildLibs = gulp.src([
-		'app/libs/**',
-		]).pipe(gulp.dest('dist/libs'));
-
 });
 
 gulp.task('deploy', function() {
