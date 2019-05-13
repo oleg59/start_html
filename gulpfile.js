@@ -80,7 +80,7 @@ gulp.task('rsync', function() {
 	return gulp.src('app/**')
 	.pipe(rsync({
 		root: 'app/',
-		hostname: 'testoleg59ru710@test.oleg59.ru',
+		hostname: '{{HOST}}',
 		destination: '',
 		// include: ['*.htaccess'], // Includes files to deploy
 		exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excludes files from deploy
@@ -121,9 +121,9 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 gulp.task('deploy', function() {
 
 	var conn = ftp.create({
-		host:      'test.oleg59.ru',
-		user:      'testoleg59ru710',
-		password:  'be8be6fb25b0',
+		host:      '{{HOST}}',
+		user:      '{{USER}}',
+		password:  '{{PASSWORD}}',
 		parallel:  10,
 		log: gutil.log
 	});
