@@ -1,9 +1,4 @@
-include blocks/mixins.pug
-doctype html
-html(lang="ru")
-	head
-		include blocks/head.pug
-	body 
-		include blocks/header.pug	
+extends layouts/layout.pug
 
-		include blocks/footer.pug
+block content
+	h1 привет

@@ -1,11 +1,11 @@
 @import "vars"
 
 ::placeholder
-	color: #8b8b8b
+	color: $placeholder-color
 
 ::selection
-	background-color: $accent
-	color: #fff
+	background-color: $selection-bg
+	color: $selection-color
 
 html, body
 	height: 100%
@@ -15,20 +15,21 @@ html, body
 	padding: 0 
 	outline: none
 body
-	font-size: 16px
+	font-size: $body-font-size
 	min-width: 320px
 	position: relative
-	line-height: 1.2
+	line-height: $body-line-height
 	font-family: $default-font
 	overflow-x: hidden
+	background-color: $body-bg
 	input, textarea
-			border: #666 1px solid
+			border: $border-color 1px solid
 			outline: none
 			&:focus:required:invalid
-				border-color: red
+				border-color: $error-color
 			&:required:valid
-				border-color: green
+				border-color: $success-color
 a
-	color: #353535
+	color: $accent
 	&:hover
-		color: #353535
+		color: $accent

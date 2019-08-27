@@ -1,0 +1,11 @@
+include ../blocks/mixins.pug
+doctype html
+html(lang=lang)
+    head
+        +head('Брайт-софт')
+    body
+        include ../blocks/header.pug
+
+        block content
+
+        include ../blocks/footer.pug

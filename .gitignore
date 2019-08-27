@@ -15,5 +15,4 @@
 /**/package-lock.json
 /**/Thumbs.db
 /**/*.DS_Store
-app/css/main.min.css
-app/js/scripts.min.js
+/build/
