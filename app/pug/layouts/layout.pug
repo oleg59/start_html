@@ -1,11 +1,15 @@
+include ../blocks/var.pug
 include ../blocks/mixins.pug
+block vars
 doctype html
 html(lang=lang)
-    head
-        +head('Брайт-софт')
-    body
-        include ../blocks/header.pug
+        head
+            +head(title, description, keywords)
+        body
+            main.b-main
 
-        block content
+                include ../blocks/header.pug
 
-        include ../blocks/footer.pug
+                block content
+
+

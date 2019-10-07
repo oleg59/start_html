@@ -1,13 +1,11 @@
 {
-  "name": "optimizedhtml",
-  "version": "4.0.1",
-  "description": "OptimizedHTML 4 - Start HTML Template",
+  "name": "start-html",
+  "version": "1.0",
+  "description": "gulp bootstrap4 pug sass slick fancybox",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "WebDesign Master",
-  "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
