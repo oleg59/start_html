@@ -1,11 +1,13 @@
 {
   "name": "start-html",
-  "version": "1.0",
-  "description": "gulp bootstrap4 pug sass slick fancybox",
+  "version": "1.0.0",
+  "description": "start-html",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "oleg59",
+  "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
